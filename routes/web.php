@@ -22,3 +22,5 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/settings', 'SettingsController@index')->name('settings')->middleware('verified');
 Route::put('/settings', 'SettingsController@update')->name('settings')->middleware('verified');
+
+Route::resource('/gyms', 'BoulderGymController');
